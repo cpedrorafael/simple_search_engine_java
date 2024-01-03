@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        var dataArg = args[1];
+        var dataArg = args[0];
         File dataFile = new File(dataArg);
         Scanner fileScanner = new Scanner(dataFile);
         var inputScanner = new Scanner(System.in);
@@ -40,8 +40,8 @@ public class Main {
     private static void showMenu(List<String> lines,  Map<String, List<Integer>> invertedIndex, Scanner scanner){
         System.out.println("\n\n\n");
         System.out.println("=== Menu ===");
-        System.out.println("1. Find a person");
-        System.out.println("2. Print all people");
+        System.out.println("1. Find a word");
+        System.out.println("2. Print all words);
         System.out.println("0. Exit");
         int selected = Integer.parseInt(scanner.nextLine());
         switch (selected) {
@@ -61,10 +61,11 @@ public class Main {
     }
 
     private static void findPerson(List<String> lines, Map<String, List<Integer>> invertedIndex, Scanner scanner){
-        System.out.println("Select a matching strategy: ALL, ANY, NONE");
+        System.out.println("Select a matching strategy: \n ALL (find all lines where query matches exactly), " +
+                "\n ANY (find all lines where query matches at least once), NONE");
         String strategyInput = scanner.nextLine();
         Strategy strategy = getStrategy(strategyInput);
-        System.out.println("Enter a name or email to search all suitable people.");
+        System.out.println("Enter words to search.");
         String query = scanner.nextLine();
         List<String> matches = new ArrayList<String>();
 
