@@ -9,7 +9,9 @@ Options
 1- Find a word in the file.
  * Enter the search strategy ("all" or "any"): all (default: none)
  * Enter a query: word1 word2 word3
+
 2- Print all words (no explanation necessary duhh).
+
 3- Exit the program.
  
 Have fun :)
