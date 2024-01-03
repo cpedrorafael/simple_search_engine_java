@@ -4,7 +4,6 @@ How To Use
 1. Download the project.
 2. Open the project in your favorite IDE.
 3. Run the project with passing the file you want to search in as a parameter.
-
 Options
 -------
 1- Find a word in the file.
